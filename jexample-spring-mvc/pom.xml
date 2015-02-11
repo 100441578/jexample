@@ -7,9 +7,9 @@
 		<artifactId>jexample</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>jexample-servlet2</artifactId>
+	<artifactId>jexample-spring-mvc</artifactId>
 	<packaging>war</packaging>
-	<name>jexample-servlet2 Maven Webapp</name>
+	<name>jexample-spring-mvc Maven Webapp</name>
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -18,6 +18,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>jexample-servlet2</finalName>
+		<finalName>jexample-spring-mvc</finalName>
 	</build>
 </project>
