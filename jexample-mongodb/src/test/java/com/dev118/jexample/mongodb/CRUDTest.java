@@ -50,7 +50,7 @@ public class CRUDTest {
 
 	@Test
 	public void test() {
-
+		System.out.println(dbCollection.count());
 	}
 
 }
