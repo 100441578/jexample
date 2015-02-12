@@ -1,0 +1,11 @@
+INSERT INTO `user` VALUES ('1', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', 'admin', 'SYSTEM', '1', 'admin', null);
+INSERT INTO `user` VALUES ('2', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '1', 'admin0', null);
+INSERT INTO `user` VALUES ('3', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '0', 'admin1', null);
+INSERT INTO `user` VALUES ('4', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '1', 'admin2', null);
+INSERT INTO `user` VALUES ('5', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '0', 'admin3', null);
+INSERT INTO `user` VALUES ('6', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '1', 'admin4', null);
+INSERT INTO `user` VALUES ('7', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '0', 'admin5', null);
+INSERT INTO `user` VALUES ('8', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '1', 'admin6', null);
+INSERT INTO `user` VALUES ('9', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '0', 'admin7', null);
+INSERT INTO `user` VALUES ('10', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '1', 'admin8', null);
+INSERT INTO `user` VALUES ('11', '2015-02-11 22:30:58', '2015-02-11 22:30:58', '0', '123', 'SYSTEM', '0', 'admin9', null);

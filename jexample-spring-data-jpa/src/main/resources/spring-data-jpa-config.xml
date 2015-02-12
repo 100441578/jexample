@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:repository="http://www.springframework.org/schema/data/repository" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.7.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<util:properties id="db_cfg" location="classpath:db-config.properties" />
+
+	<bean id="driverManagerDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" abstract="true" />
+
+	<bean id="dataSource" parent="driverManagerDataSource">
+		<property name="driverClassName" value="#{db_cfg['db.mysql.driver']}" />
+		<property name="url" value="#{db_cfg['db.mysql.url']}" />
+		<property name="username" value="#{db_cfg['db.mysql.username']}" />
+		<property name="password" value="#{db_cfg['db.mysql.password']}" />
+	</bean>
+
+	<bean id="entityManagerFactory" depends-on="" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceUnitName" value="jexample-spring-data-jpa" />
+		<property name="packagesToScan" value="com.dev118.jexample.spring.data.jpa.entity" />
+		<property name="jpaVendorAdapter">
+			<!-- 为LocalContainerEntityManagerFactoryBean定义了基于hibernate的JPA适配器 -->
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaPropertyMap">
+			<map>
+				<entry key="hibernate.dialect" value="#{db_cfg['hibernate.dialect']}" />
+				<entry key="hibernate.show_sql" value="#{db_cfg['hibernate.show_sql']}" />
+				<entry key="hibernate.format_sql" value="#{db_cfg['hibernate.format_sql']}" />
+				<entry key="hibernate.hbm2ddl.auto" value="#{db_cfg['hibernate.hbm2ddl.auto']}" />
+
+				<entry key="hibernate.ejb.interceptor">
+					<bean class="com.dev118.jexample.spring.data.jpa.HibernateInterceptor" />
+				</entry>
+				<!-- 只扫描class文件，不扫描hbm，默认两个都搜索 -->
+				<entry key="hibernate.archive.autodetection" value="class" />
+				<!-- 不检查@NamedQuery -->
+				<entry key="hibernate.query.startup_check" value="false" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<jpa:repositories base-package="com.dev118.jexample.spring.data.jpa.dao" repository-impl-postfix="Impl" entity-manager-factory-ref="entityManagerFactory"
+		transaction-manager-ref="transactionManager" />
+
+	<!-- DB Script initialize -->
+	<jdbc:initialize-database data-source="dataSource" enabled="#{db_cfg['jdbc.init']}" ignore-failures="ALL">
+		<jdbc:script location="classpath:db-init.sql" />
+	</jdbc:initialize-database>
+
+</beans>
