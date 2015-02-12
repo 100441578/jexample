@@ -18,6 +18,8 @@
 		<module>jexample-spring-data-jpa</module>
 		<module>jexample-spring-data-mongodb</module>
     <module>jexample-spring-mvc</module>
+    <module>jexample.basic</module>
+    <module>jexample-basic</module>
   </modules>
 
 	<properties>
