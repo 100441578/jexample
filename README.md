@@ -1,6 +1,16 @@
 # Java Example #
 ----------
-Java 示例：｛apache-commons, spring, hibernate, mybatis...｝
+The shortest answer is doing the thing.
+
+    package com.dev118.jexample.basic;
+
+	public class HelloWorld {
+
+		public static void main(String[] args) {
+			System.out.println("helloworld");
+		}
+
+	}
 
 > jexample-basic
 
@@ -53,3 +63,7 @@ Java 示例：｛apache-commons, spring, hibernate, mybatis...｝
 > jexample-spring-mvc
 
 //TODO
+
+----------
+
+MyBlog [http://dev118.com](http://dev118.com "Just do it.")
