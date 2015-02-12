@@ -10,6 +10,11 @@ public class IocAnn implements Ioc {
 
 	public IocAnn(Class<?> annotatedClass) {
 		// Class<?> myConfig = annotatedClass;
+		Config config = annotatedClass.getAnnotation(Config.class);
+
+		String basePackage = config.basePackage();
+
+		System.out.println(basePackage);
 
 	}
 

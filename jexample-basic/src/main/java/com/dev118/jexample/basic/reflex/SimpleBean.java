@@ -8,6 +8,25 @@ public class SimpleBean {
 
 	private Integer sex;
 
+	public SimpleBean() {
+		super();
+	}
+
+	public SimpleBean(String username, String password, Integer sex) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.sex = sex;
+	}
+
+	public String getInfo() {
+		return "";
+	}
+
+	public void showInfo() {
+
+	}
+
 	public String getUsername() {
 		return username;
 	}

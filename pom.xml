@@ -20,6 +20,10 @@
     <module>jexample-spring-mvc</module>
     <module>jexample.basic</module>
     <module>jexample-basic</module>
+    <module>jexample-mybatis</module>
+    <module>jexample-spring-jdbc</module>
+    <module>jexample-camel</module>
+    <module>jexample-commons</module>
   </modules>
 
 	<properties>

@@ -16,8 +16,8 @@ public class MyAnnotationTest {
 
 	@Test
 	public void test() {
-		// Ioc ioc = new IocAnn(MyConfig.class);
-		Ioc ioc = new IocAnn("com.dev118.jexample.basic.annotation.sample");
+		Ioc ioc = new IocAnn(MyConfig.class);
+		// Ioc ioc = new IocAnn("com.dev118.jexample.basic.annotation.sample");
 
 		System.out.println(ioc.getCount());
 	}
