@@ -10,19 +10,20 @@
 	<description>Java Example</description>
 
 	<modules>
+		<module>jexample-app1-api</module>
+		<module>jexample-app1-impl</module>
+		<module>jexample-app0-api</module>
+		<module>jexample-app0-impl</module>
+		<module>jexample-basic</module>
+		<module>jexample-camel</module>
+		<module>jexample-commons</module>
 		<module>jexample-http-client</module>
-		<module>jexample-mongodb</module>
+		<module>jexample-mule</module>
 		<module>jexample-servlet2</module>
 		<module>jexample-servlet3</module>
 		<module>jexample-spring</module>
-		<module>jexample-spring-data-jpa</module>
-		<module>jexample-spring-data-mongodb</module>
+		<module>jexample-spring-data</module>
 		<module>jexample-spring-mvc</module>
-		<module>jexample.basic</module>
-		<module>jexample-basic</module>
-		<module>jexample-mybatis</module>
-		<module>jexample-camel</module>
-		<module>jexample-commons</module>
 	</modules>
 
 	<properties>

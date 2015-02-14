@@ -14,25 +14,21 @@ The shortest answer is doing the thing.
 
 > jexample-basic
 
-//TODO
+{ Annotation, DesignPattern, IO, Jdbc, MongoDB, Reflex, Socket, Sort, Thread }
 
 > jexample-camel
 
 //TODO
 
+> jexample-mule
+
+//TODO
+
 > jexample-commons
 
-//TODO
+Apache Commons
 
 > jexample-http-client
-
-//TODO
-
-> jexample-mongodb
-
-//TODO
-
-> jexample-mybatis
 
 //TODO
 
@@ -46,23 +42,15 @@ The shortest answer is doing the thing.
 
 > jexample-spring
 
-//TODO
+{ Ioc }
 
-> jexample-spring-data-jpa
+> jexample-spring-data
 
-//TODO
-
-> jexample-spring-data-mongodb
-
-//TODO
-
-> jexample-spring-jdbc
-
-//TODO
+{ Spring-Data-Jpa, Spring-Data-Mongodb }
 
 > jexample-spring-mvc
 
-//TODO
+{ Spring-MVC, Spring-Security }
 
 ----------
 
