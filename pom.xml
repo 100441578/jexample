@@ -17,14 +17,13 @@
 		<module>jexample-spring</module>
 		<module>jexample-spring-data-jpa</module>
 		<module>jexample-spring-data-mongodb</module>
-    <module>jexample-spring-mvc</module>
-    <module>jexample.basic</module>
-    <module>jexample-basic</module>
-    <module>jexample-mybatis</module>
-    <module>jexample-spring-jdbc</module>
-    <module>jexample-camel</module>
-    <module>jexample-commons</module>
-  </modules>
+		<module>jexample-spring-mvc</module>
+		<module>jexample.basic</module>
+		<module>jexample-basic</module>
+		<module>jexample-mybatis</module>
+		<module>jexample-camel</module>
+		<module>jexample-commons</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
