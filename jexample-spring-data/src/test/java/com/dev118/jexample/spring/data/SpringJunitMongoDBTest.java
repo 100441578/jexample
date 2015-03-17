@@ -1,4 +1,4 @@
-package com.dev118.jexample.spring.data.mongodb;
+package com.dev118.jexample.spring.data;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

@@ -12,7 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
-import com.dev118.jexample.spring.data.jpa.SpringJunitJpaTest;
+import com.dev118.jexample.spring.data.SpringJunitJpaTest;
 import com.dev118.jexample.spring.data.jpa.entity.User;
 import com.dev118.jexample.spring.data.jpa.entity.UserDetail;
 import com.dev118.jexample.spring.data.jpa.entity.type.SexType;

@@ -1,4 +1,4 @@
-package com.dev118.jexample.spring.data.jpa;
+package com.dev118.jexample.spring.data;
 
 import static org.junit.Assert.fail;
 

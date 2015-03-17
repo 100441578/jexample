@@ -1,8 +1,11 @@
 package com.dev118.jexample.app0.api;
 
-public interface PrintCamel {
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-	public void print(String content);
+public interface PrintCamel extends Remote {
 
-	public String format(String content);
+	public void print(String content) throws RemoteException;
+
+	public String format(String content) throws RemoteException;
 }

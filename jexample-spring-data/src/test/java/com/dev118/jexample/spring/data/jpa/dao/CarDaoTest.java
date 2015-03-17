@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.dev118.jexample.spring.data.jpa.SpringJunitJpaTest;
+import com.dev118.jexample.spring.data.SpringJunitJpaTest;
 import com.dev118.jexample.spring.data.jpa.entity.Car;
 import com.dev118.jexample.spring.data.jpa.entity.CarPK;
 
