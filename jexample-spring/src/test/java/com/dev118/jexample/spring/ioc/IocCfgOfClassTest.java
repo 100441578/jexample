@@ -11,7 +11,7 @@ import com.dev118.jexample.spring.bean.BeansConfig;
 import com.dev118.jexample.spring.bean.api.BookService;
 import com.dev118.jexample.spring.bean.api.PrintService;
 
-public class CfgOfClassTest {
+public class IocCfgOfClassTest {
 
 	private ApplicationContext context;
 

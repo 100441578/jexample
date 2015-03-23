@@ -19,13 +19,11 @@ import com.dev118.jexample.spring.bean.api.BookService;
 @Service
 public class BookServiceImpl implements BookService {
 
-	private List<BookEntity> bookList;
+	private List<BookEntity> bookList = new ArrayList<BookEntity>();
 
 	@PostConstruct
 	@Override
 	public void init() {
-		bookList = new ArrayList<BookEntity>();
-
 		bookList.add(new BookEntity(1, "C语言编程", "张三", "计算机相关书籍"));
 		bookList.add(new BookEntity(2, "C++程序设计", "张三", "计算机相关书籍"));
 		bookList.add(new BookEntity(3, "Java编程思想", "张三", "计算机相关书籍"));
@@ -59,6 +57,7 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public List<BookEntity> findAll() {
+		System.out.println("BookSize:" + bookList.size());
 		return bookList;
 	}
 

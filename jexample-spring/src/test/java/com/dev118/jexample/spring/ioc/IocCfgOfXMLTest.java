@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.dev118.jexample.spring.bean.api.BookService;
 import com.dev118.jexample.spring.bean.api.PrintService;
 
-public class CfgOfXMLTest {
+public class IocCfgOfXMLTest {
 
 	private ApplicationContext context;
 

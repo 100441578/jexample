@@ -1,4 +1,6 @@
-package com.dev118.jexample.spring.ioc;
+package com.dev118.jexample.spring.aop;
+
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -7,17 +9,16 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.dev118.jexample.spring.bean.BookEntity;
 import com.dev118.jexample.spring.bean.api.BookService;
-import com.dev118.jexample.spring.bean.api.PrintService;
 
-public class CfgOfAnnotationTest {
+public class AopCfgOfXMLTest {
 
 	private ApplicationContext context;
 
 	@Before
 	public void setUp() throws Exception {
-		context = new ClassPathXmlApplicationContext(
-				"spring-ioc-config-annotation.xml");
+		context = new ClassPathXmlApplicationContext("spring-aop-config.xml");
 	}
 
 	@After
@@ -25,17 +26,12 @@ public class CfgOfAnnotationTest {
 	}
 
 	@Test
-	public void test0() {
-		PrintService ps = context.getBean(PrintService.class);
-		Assert.assertNotNull(ps);
-	}
-
-	@Test
-	public void test1() {
+	public void test() {
 		BookService bs = context.getBean(BookService.class);
 		Assert.assertNotNull(bs);
-		Assert.assertNotNull(bs.findAll());
-		System.out.println(bs.findAll().size());
+		List<BookEntity> list = bs.findAll();
+		Assert.assertNotNull(list);
+		System.out.println(list.size());
 	}
 
 }
