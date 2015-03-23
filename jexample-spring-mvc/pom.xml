@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.dev118</groupId>
+		<artifactId>jexample</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>jexample-spring-mvc</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>jexample-spring-mvc-chapter1</module>
+    <module>jexample-spring-mvc-chapter2</module>
+  </modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.org.springframework>4.1.5.RELEASE</version.org.springframework>
+	</properties>
+
+	<dependencies>
+		<!-- Servlet2 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- Servlet3 -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.servlet</groupId> -->
+		<!-- <artifactId>javax.servlet-api</artifactId> -->
+		<!-- <version>3.1.0</version> -->
+		<!-- </dependency> -->
+
+		<!-- Springframework -->
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		
+	</dependencies>
+</project>

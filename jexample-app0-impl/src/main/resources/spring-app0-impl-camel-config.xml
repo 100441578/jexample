@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<!-- 服务器端配置 -->
+	<bean id="app0Registry" class="org.springframework.remoting.rmi.RmiRegistryFactoryBean">
+		<property name="port" value="7575" />
+	</bean>
+
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<!-- 定义提供服务的地址，客户端使用 -->
+		<property name="registry" ref="app0Registry" />
+		<!-- 定义提供服务的服务名称，客户端使用 -->
+		<property name="serviceName" value="printService" />
+		<!-- 定义提供服务的接口类，在客户端必须定义 -->
+		<property name="serviceInterface" value="com.dev118.jexample.app0.api.PrintCamel" />
+		<!-- 定义提供服务的实现类，在客户端不用定义 -->
+		<property name="service">
+			<bean class="com.dev118.jexample.app0.impl.PrintCamelImpl" />
+		</property>
+	</bean>
+
+</beans>
