@@ -16,8 +16,7 @@ public class IocCfgOfAnnotationTest {
 
 	@Before
 	public void setUp() throws Exception {
-		context = new ClassPathXmlApplicationContext(
-				"spring-ioc-config-annotation.xml");
+		context = new ClassPathXmlApplicationContext("spring-ioc-config-annotation.xml");
 	}
 
 	@After

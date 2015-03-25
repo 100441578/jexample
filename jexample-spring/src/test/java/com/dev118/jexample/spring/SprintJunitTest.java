@@ -29,8 +29,6 @@ public class SprintJunitTest extends AbstractJUnit4SpringContextTests {
 	@Test
 	public void test1() {
 		Assert.assertNotNull(bs);
-		Assert.assertNotNull(bs.findAll());
-		System.out.println(bs.findAll().size());
 	}
 
 }

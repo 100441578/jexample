@@ -39,26 +39,52 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public void remove(Integer id) {
-		// TODO Auto-generated method stub
-
+		int index = getIndexByBookId(id);
+		if (index != -1) {
+			bookList.remove(index);
+		}
 	}
 
 	@Override
 	public void update(BookEntity bookEntity) {
-		// TODO Auto-generated method stub
-
+		int index = getIndexByBookId(bookEntity.getId());
+		if (index != -1) {
+			BookEntity bookEntityOld = bookList.get(index);
+			
+			bookEntityOld.setName(bookEntity.getName());
+			bookEntityOld.setAuthor(bookEntity.getAuthor());
+			bookEntityOld.setDescription(bookEntity.getDescription());
+		}
 	}
 
 	@Override
 	public BookEntity findOne(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		BookEntity bookEntity = null;
+		int index = getIndexByBookId(id);
+		if (index != -1) {
+			bookEntity = bookList.get(index);
+		}
+		return bookEntity;
 	}
 
 	@Override
 	public List<BookEntity> findAll() {
 		System.out.println("BookSize:" + bookList.size());
 		return bookList;
+	}
+	
+	
+
+	private Integer getIndexByBookId(Integer id) {
+		int index = -1;
+		for (int i = 0; i < bookList.size(); i++) {
+			BookEntity bookEntity = bookList.get(i);
+			if (bookEntity.getId() == id) {
+				index = i;
+				break;
+			}
+		}
+		return index;
 	}
 
 }
